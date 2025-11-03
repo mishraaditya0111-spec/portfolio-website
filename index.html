@@ -1,67 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heart Demo</title>
-<style>
-  body {
-    background: #0a0a0a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-  .heart {
-    position: relative;
-    width: 200px;
-    height: 180px;
-    animation: pulse 2s infinite;
-  }
-  .heart::before,
-  .heart::after {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 160px;
-    background: #ff4d6d;
-    border-radius: 100px 100px 0 0;
-  }
-  .heart::before {
-    left: 100px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-  }
-  .heart::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-  }
-  @keyframes pulse {
-    0%,100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-  }
+    body {
+      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-  .text {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 26px;
-    color: #ffffff;
-    text-shadow: 0 0 10px #ff8fab;
-    z-index: 10;
-  }
-</style>
+    header {
+      text-align: center;
+      padding: 100px 20px 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffff;
+      text-shadow: 0 0 20px #00ffff;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      color: #fff;
+      font-weight: 300;
+      animation: fadeInText 3s ease-in-out;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 2s ease;
+    }
+
+    h3 {
+      color: #00ffff;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #00ffff33;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      color: #ddd;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 30px;
+      animation: fadeIn 3s ease;
+    }
+
+    .contact a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    .contact a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; letter-spacing: 5px; }
+      to { opacity: 1; letter-spacing: normal; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <div class="heart">
-    <div class="text">Aina</div>
+  <header>
+    <h1>Welcome to Aina World</h1>
+    <h2>Hi, I'm Aditya — Where passion meets purpose, creation begins.</h2>
+  </header>
+
+  <section>
+    <h3>💻 Skills</h3>
+    <ul>
+      <li>Basic Coding & Programming Logic</li>
+      <li>Linux System Knowledge</li>
+      <li>API Fundamentals</li>
+      <li>Creative Thinking & Automation Interest</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>🚀 Experience</h3>
+    <p>
+      Exploring technology with curiosity and consistency.  
+      I’ve worked on small automation and web projects to sharpen my foundation.  
+      Currently building projects that combine logic with creative flow.
+    </p>
+  </section>
+
+  <section>
+    <h3>🎯 Goal</h3>
+    <p>
+      To grow in the tech industry through hands-on learning, problem-solving,  
+      and building meaningful digital solutions from home.
+    </p>
+  </section>
+
+  <div class="contact">
+    <h3>📩 Contact Me</h3>
+    <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
   </div>
+
+  <footer>Made with 💙 by Aditya | © 2025</footer>
 </body>
 </html>
