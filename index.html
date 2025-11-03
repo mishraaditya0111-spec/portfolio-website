@@ -99,21 +99,27 @@
 <body>
   <h1 style="
   color: #ffffff;
-  text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
   font-size: 48px;
   text-align: center;
-  animation: glow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff;
+  animation: glow 3s ease-in-out infinite alternate;
 ">
-  Aditya Mishra
+  Hi, I'm Aditya Mishra
 </h1>
 
 <style>
 @keyframes glow {
-  from {
+  0% {
+    color: #ffffff;
     text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
   }
-  to {
+  50% {
+    color: #aaffff;
     text-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+  }
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 15px #00ffff, 0 0 40px #00ffff;
   }
 }
 </style>
