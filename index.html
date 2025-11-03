@@ -8,121 +8,111 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background-color: #0f172a;
-      color: #e2e8f0;
+      background: radial-gradient(circle at top, #0a192f, #172a45);
+      color: #e6f1ff;
+      text-align: center;
+      padding: 60px 20px;
       overflow-x: hidden;
     }
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      animation: fadeIn 2s ease;
+    h1 {
+      color: #64ffda;
+      font-size: 3rem;
+      opacity: 0;
+      animation: slideIn 1.5s ease-out forwards;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      color: #38bdf8;
-      animation: slideDown 1.5s ease;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      animation: fadeIn 3s ease;
+    h2 {
+      color: #8892b0;
+      font-weight: normal;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeUp 2s ease forwards;
+      animation-delay: 0.5s;
     }
 
     section {
-      padding: 60px 20px;
-      text-align: center;
+      margin-top: 60px;
       opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlideUp 1.5s ease forwards;
-    }
-
-    section:nth-child(2) {
-      animation-delay: 0.5s;
-    }
-    section:nth-child(3) {
+      animation: fadeUp 2s ease forwards;
       animation-delay: 1s;
     }
 
-    .projects {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+    h3 {
+      color: #64ffda;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
 
-    .card {
-      background: #1e293b;
-      border-radius: 12px;
-      padding: 20px;
-      width: 280px;
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      margin-top: 25px;
+      background-color: #64ffda;
+      color: #0a192f;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+      animation: fadeUp 2.5s ease forwards;
+      animation-delay: 1.2s;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #64748b;
-      background: #020617;
+    .btn:hover {
+      background-color: #52e0c4;
+      box-shadow: 0 0 25px rgba(100, 255, 218, 0.7);
+      transform: translateY(-3px);
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
+    @keyframes slideIn {
       from { transform: translateY(-30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
 
-    @keyframes fadeSlideUp {
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 3px solid #64ffda;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3.5s steps(30, end) forwards;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aditya Mishra</h1>
-    <p>Creative Developer | Automation Enthusiast | Lifelong Learner</p>
-  </header>
+  <h1 class="typing">👋 Hi, I'm Aditya Mishra</h1>
+  <h2>AI Automation Learner | Tech Explorer | Creative Problem Solver</h2>
 
   <section>
-    <h2>About Me</h2>
-    <p>I'm passionate about blending creativity and logic to build meaningful digital experiences. Currently exploring AI automation and web development.</p>
+    <h3>Skills</h3>
+    <p>Python, Linux, API handling, GitHub, and a sharp logical mindset learning every day!</p>
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>Designed and developed a personal website with smooth animations and GitHub Pages deployment.</p>
-      </div>
-      <div class="card">
-        <h3>AI Automation</h3>
-        <p>Experimenting with Python and APIs to build simple automation tools that reduce repetitive tasks.</p>
-      </div>
-    </div>
+    <h3>Projects</h3>
+    <p>Building my personal automation and portfolio projects to show recruiters my potential.</p>
   </section>
 
   <section>
-    <h2>Contact</h2>
-    <p>📩 Email: <a href="mailto:mishraaditya0111@gmail.com" style="color:#38bdf8;">mishraaditya0111@gmail.com</a></p>
+    <h3>Contact</h3>
+    <p>📧 <a href="mailto:mishraaditya0111@gmail.com" class="btn">Hire Me 💼</a></p>
   </section>
-
-  <footer>
-    <p>© 2025 Aditya Mishra. All rights reserved.</p>
-  </footer>
 </body>
 </html>
